@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace TwitchViewer
 {
-        public class TopGames
+        public class TopGamesJSON
         {
             public int _total { get; set; }
             public Top[] top { get; set; }

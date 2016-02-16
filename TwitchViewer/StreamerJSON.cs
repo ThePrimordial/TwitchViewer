@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace TwitchViewer
 {
 
-    public class Streams
+    public class StreamsJSON
     {
             public Stream[] streams { get; set; }
             public int _total { get; set; }

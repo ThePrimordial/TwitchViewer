@@ -97,5 +97,23 @@ namespace TwitchViewer
             process.Start();
             process.WaitForExit();
         }
+
+        private void btn_search_Click(object sender, EventArgs e)
+        {
+            cleanlistbox(lb_channelList);
+            liveChannels = TwitchImp.generateStreamsFromSearch(tb_searchInput.Text);
+            bool isEmpty = !liveChannels.Any();
+            if (isEmpty)
+            {
+                label_info.Text = "There are no online streams including this name";
+            }
+            else
+            {
+                foreach (Stream game in liveChannels)
+                {
+                    lb_channelList.Items.Add(game.channel.name + " - " + game.viewers + " viewers");
+                }
+            }
+        }
     }
 }

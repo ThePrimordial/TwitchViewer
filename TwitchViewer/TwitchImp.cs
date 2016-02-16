@@ -14,10 +14,26 @@ namespace TwitchViewer
     class TwitchImp
     {
 
+        public static List<Stream> generateStreamsFromSearch(string name)
+        {
+            dynamic res = getResponseFromUrl("https://api.twitch.tv/kraken/search/streams?q=" + name);
+            StreamsJSON streams = JsonConvert.DeserializeObject<StreamsJSON>(res);
+
+            List<Stream> liveChannels = new List<Stream>();
+
+            foreach (Stream stream in streams.streams)
+            {
+                liveChannels.Add(stream);
+            }
+
+            return liveChannels;
+        }
+        
+
         public static List<Stream> generateStreams(string gameName)
         {
-            dynamic res = getResponseFromUrl("https://api.twitch.tv/kraken/streams?game=" + HttpUtility.UrlEncode(gameName));
-            Streams streams = JsonConvert.DeserializeObject<Streams>(res);
+            dynamic res = getResponseFromUrl("https://api.twitch.tv/kraken/streams?game=" + HttpUtility.UrlEncode(gameName) + "&limit=100");
+            StreamsJSON streams = JsonConvert.DeserializeObject<StreamsJSON>(res);
 
             List<Stream> liveChannels = new List<Stream>();
 
@@ -33,7 +49,7 @@ namespace TwitchViewer
         {
             //Todo enum
             dynamic res = getResponseFromUrl("https://api.twitch.tv/kraken/games/top?limit=100");
-            TopGames topgames = JsonConvert.DeserializeObject<TopGames>(res);
+            TopGamesJSON topgames = JsonConvert.DeserializeObject<TopGamesJSON>(res);
 
             List<Top> topGameList = new List<Top>();
             foreach (Top top in topgames.top)
