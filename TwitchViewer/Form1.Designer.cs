@@ -41,6 +41,8 @@
             this.tb_searchInput = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.btn_search = new System.Windows.Forms.Button();
+            this.btn_addFav = new System.Windows.Forms.Button();
+            this.btn_listFav = new System.Windows.Forms.Button();
             this.qualityPanel.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -75,7 +77,7 @@
             // 
             // btn_start
             // 
-            this.btn_start.Location = new System.Drawing.Point(311, 377);
+            this.btn_start.Location = new System.Drawing.Point(372, 335);
             this.btn_start.Name = "btn_start";
             this.btn_start.Size = new System.Drawing.Size(196, 59);
             this.btn_start.TabIndex = 9;
@@ -92,7 +94,7 @@
             this.qualityPanel.Controls.Add(this.low);
             this.qualityPanel.Location = new System.Drawing.Point(575, 336);
             this.qualityPanel.Name = "qualityPanel";
-            this.qualityPanel.Size = new System.Drawing.Size(222, 151);
+            this.qualityPanel.Size = new System.Drawing.Size(176, 151);
             this.qualityPanel.TabIndex = 10;
             // 
             // label_streamquality
@@ -148,7 +150,7 @@
             // 
             // tb_searchInput
             // 
-            this.tb_searchInput.Location = new System.Drawing.Point(12, 397);
+            this.tb_searchInput.Location = new System.Drawing.Point(12, 356);
             this.tb_searchInput.Name = "tb_searchInput";
             this.tb_searchInput.Size = new System.Drawing.Size(178, 22);
             this.tb_searchInput.TabIndex = 11;
@@ -156,7 +158,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(12, 377);
+            this.label1.Location = new System.Drawing.Point(12, 336);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(128, 17);
             this.label1.TabIndex = 12;
@@ -164,7 +166,7 @@
             // 
             // btn_search
             // 
-            this.btn_search.Location = new System.Drawing.Point(12, 423);
+            this.btn_search.Location = new System.Drawing.Point(12, 384);
             this.btn_search.Name = "btn_search";
             this.btn_search.Size = new System.Drawing.Size(178, 30);
             this.btn_search.TabIndex = 13;
@@ -172,11 +174,32 @@
             this.btn_search.UseVisualStyleBackColor = true;
             this.btn_search.Click += new System.EventHandler(this.btn_search_Click);
             // 
+            // btn_addFav
+            // 
+            this.btn_addFav.Location = new System.Drawing.Point(372, 435);
+            this.btn_addFav.Name = "btn_addFav";
+            this.btn_addFav.Size = new System.Drawing.Size(196, 23);
+            this.btn_addFav.TabIndex = 14;
+            this.btn_addFav.Text = "Add channel to favourites";
+            this.btn_addFav.UseVisualStyleBackColor = true;
+            this.btn_addFav.Click += new System.EventHandler(this.btn_addFav_Click);
+            // 
+            // btn_listFav
+            // 
+            this.btn_listFav.Location = new System.Drawing.Point(373, 464);
+            this.btn_listFav.Name = "btn_listFav";
+            this.btn_listFav.Size = new System.Drawing.Size(196, 23);
+            this.btn_listFav.TabIndex = 15;
+            this.btn_listFav.Text = "List Favourites";
+            this.btn_listFav.UseVisualStyleBackColor = true;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1220, 535);
+            this.Controls.Add(this.btn_listFav);
+            this.Controls.Add(this.btn_addFav);
             this.Controls.Add(this.btn_search);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.tb_searchInput);
@@ -215,6 +238,8 @@
         private System.Windows.Forms.TextBox tb_searchInput;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btn_search;
+        private System.Windows.Forms.Button btn_addFav;
+        private System.Windows.Forms.Button btn_listFav;
     }
 }
 

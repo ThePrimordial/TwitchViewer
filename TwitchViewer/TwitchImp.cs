@@ -28,7 +28,7 @@ namespace TwitchViewer
 
             return liveChannels;
         }
-        
+
 
         public static List<Stream> generateStreams(string gameName)
         {
@@ -59,6 +59,21 @@ namespace TwitchViewer
 
             return topGameList;
 
+        }
+
+        public static bool isOnline(string name)
+        {
+            dynamic res = getResponseFromUrl("https://api.twitch.tv/kraken/streams/" + name);
+            if (res.Contains("display_name"))
+            {
+                Console.WriteLine("Van sztrím");
+                return true;
+            }
+            else
+            {
+                Console.WriteLine("Nincs");
+                return false;
+            }
         }
 
         private static dynamic getResponseFromUrl(string url)

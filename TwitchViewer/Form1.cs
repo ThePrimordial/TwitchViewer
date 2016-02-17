@@ -23,6 +23,10 @@ namespace TwitchViewer
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            Favourites favourites = new Favourites();
+            DataTable dt = favourites.Tables.Add("Favourites");
+            dt.Columns.Add("Name");
+
             List<Top> games = TwitchImp.generateTopGames();
             foreach (Top top in games)
             {
@@ -61,7 +65,7 @@ namespace TwitchViewer
                 "\n" + "Viewers: " + stream.viewers +
                 "\n" + "Average FPS: " + stream.average_fps + " fps" +
                 "\n" + "Language: " + stream.channel.language +
-                "\n" + 
+                "\n" +
                 "\n" + "Followers: " + stream.channel.followers +
                 "\n" + "Total Views: " + stream.channel.views;
 
@@ -105,7 +109,7 @@ namespace TwitchViewer
             bool isEmpty = !liveChannels.Any();
             if (isEmpty)
             {
-                label_info.Text = "There are no online streams including this name";
+                label_info.Text = "There are no online streams containing this name";
             }
             else
             {
@@ -114,6 +118,11 @@ namespace TwitchViewer
                     lb_channelList.Items.Add(game.channel.name + " - " + game.viewers + " viewers");
                 }
             }
+        }
+
+        private void btn_addFav_Click(object sender, EventArgs e)
+        {
+            TwitchImp.isOnline(tb_searchInput.Text);
         }
     }
 }
