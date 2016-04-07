@@ -23,10 +23,7 @@ namespace TwitchViewer
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            Favourites favourites = new Favourites();
-            DataTable dt = favourites.Tables.Add("Favourites");
-            dt.Columns.Add("Name");
-
+           
             List<Top> games = TwitchImp.generateTopGames();
             foreach (Top top in games)
             {
