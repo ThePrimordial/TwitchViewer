@@ -1,0 +1,11 @@
+﻿<Window x:Class="TwitchViewer_WPF.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TwitchViewer_WPF"
+        mc:Ignorable="d"
+        Title="TwitchViewer" Height="600" Width="1200" WindowStartupLocation="CenterScreen" Icon="Assets/twitch_logo.png" x:Name="mainWindow" ResizeMode="CanMinimize">
+    <Frame x:Name="mainFrame"></Frame>
+    
+</Window>

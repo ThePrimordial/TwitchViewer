@@ -47,37 +47,39 @@
             // lb_gameList
             // 
             this.lb_gameList.FormattingEnabled = true;
-            this.lb_gameList.ItemHeight = 16;
-            this.lb_gameList.Location = new System.Drawing.Point(12, 21);
+            this.lb_gameList.Location = new System.Drawing.Point(9, 17);
+            this.lb_gameList.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.lb_gameList.Name = "lb_gameList";
-            this.lb_gameList.Size = new System.Drawing.Size(354, 308);
+            this.lb_gameList.Size = new System.Drawing.Size(266, 251);
             this.lb_gameList.TabIndex = 5;
             this.lb_gameList.SelectedIndexChanged += new System.EventHandler(this.lb_gameList_SelectedIndexChanged);
             // 
             // lb_channelList
             // 
             this.lb_channelList.FormattingEnabled = true;
-            this.lb_channelList.ItemHeight = 16;
-            this.lb_channelList.Location = new System.Drawing.Point(372, 21);
+            this.lb_channelList.Location = new System.Drawing.Point(279, 17);
+            this.lb_channelList.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.lb_channelList.Name = "lb_channelList";
-            this.lb_channelList.Size = new System.Drawing.Size(379, 308);
+            this.lb_channelList.Size = new System.Drawing.Size(285, 251);
             this.lb_channelList.TabIndex = 7;
             this.lb_channelList.SelectedIndexChanged += new System.EventHandler(this.lb_channelList_SelectedIndexChanged);
             // 
             // label_info
             // 
             this.label_info.AutoSize = true;
-            this.label_info.Location = new System.Drawing.Point(774, 21);
+            this.label_info.Location = new System.Drawing.Point(580, 17);
+            this.label_info.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label_info.Name = "label_info";
-            this.label_info.Size = new System.Drawing.Size(46, 17);
+            this.label_info.Size = new System.Drawing.Size(35, 13);
             this.label_info.TabIndex = 8;
             this.label_info.Text = "label1";
             // 
             // btn_start
             // 
-            this.btn_start.Location = new System.Drawing.Point(372, 377);
+            this.btn_start.Location = new System.Drawing.Point(279, 306);
+            this.btn_start.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btn_start.Name = "btn_start";
-            this.btn_start.Size = new System.Drawing.Size(196, 59);
+            this.btn_start.Size = new System.Drawing.Size(147, 48);
             this.btn_start.TabIndex = 9;
             this.btn_start.Text = "Start Selected Stream";
             this.btn_start.UseVisualStyleBackColor = true;
@@ -90,17 +92,19 @@
             this.qualityPanel.Controls.Add(this.high);
             this.qualityPanel.Controls.Add(this.medium);
             this.qualityPanel.Controls.Add(this.low);
-            this.qualityPanel.Location = new System.Drawing.Point(575, 336);
+            this.qualityPanel.Location = new System.Drawing.Point(431, 273);
+            this.qualityPanel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.qualityPanel.Name = "qualityPanel";
-            this.qualityPanel.Size = new System.Drawing.Size(176, 151);
+            this.qualityPanel.Size = new System.Drawing.Size(132, 123);
             this.qualityPanel.TabIndex = 10;
             // 
             // label_streamquality
             // 
             this.label_streamquality.AutoSize = true;
-            this.label_streamquality.Location = new System.Drawing.Point(55, 13);
+            this.label_streamquality.Location = new System.Drawing.Point(41, 11);
+            this.label_streamquality.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label_streamquality.Name = "label_streamquality";
-            this.label_streamquality.Size = new System.Drawing.Size(101, 17);
+            this.label_streamquality.Size = new System.Drawing.Size(75, 13);
             this.label_streamquality.TabIndex = 11;
             this.label_streamquality.Text = "Stream Quality";
             // 
@@ -108,9 +112,10 @@
             // 
             this.source.AutoSize = true;
             this.source.Checked = true;
-            this.source.Location = new System.Drawing.Point(4, 114);
+            this.source.Location = new System.Drawing.Point(3, 93);
+            this.source.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.source.Name = "source";
-            this.source.Size = new System.Drawing.Size(127, 21);
+            this.source.Size = new System.Drawing.Size(97, 17);
             this.source.TabIndex = 3;
             this.source.TabStop = true;
             this.source.Text = "Source(default)";
@@ -119,9 +124,10 @@
             // high
             // 
             this.high.AutoSize = true;
-            this.high.Location = new System.Drawing.Point(4, 87);
+            this.high.Location = new System.Drawing.Point(3, 71);
+            this.high.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.high.Name = "high";
-            this.high.Size = new System.Drawing.Size(58, 21);
+            this.high.Size = new System.Drawing.Size(47, 17);
             this.high.TabIndex = 2;
             this.high.Text = "High";
             this.high.UseVisualStyleBackColor = true;
@@ -129,9 +135,10 @@
             // medium
             // 
             this.medium.AutoSize = true;
-            this.medium.Location = new System.Drawing.Point(4, 60);
+            this.medium.Location = new System.Drawing.Point(3, 49);
+            this.medium.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.medium.Name = "medium";
-            this.medium.Size = new System.Drawing.Size(78, 21);
+            this.medium.Size = new System.Drawing.Size(62, 17);
             this.medium.TabIndex = 1;
             this.medium.Text = "Medium";
             this.medium.UseVisualStyleBackColor = true;
@@ -139,34 +146,38 @@
             // low
             // 
             this.low.AutoSize = true;
-            this.low.Location = new System.Drawing.Point(4, 33);
+            this.low.Location = new System.Drawing.Point(3, 27);
+            this.low.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.low.Name = "low";
-            this.low.Size = new System.Drawing.Size(54, 21);
+            this.low.Size = new System.Drawing.Size(45, 17);
             this.low.TabIndex = 0;
             this.low.Text = "Low";
             this.low.UseVisualStyleBackColor = true;
             // 
             // tb_searchInput
             // 
-            this.tb_searchInput.Location = new System.Drawing.Point(15, 377);
+            this.tb_searchInput.Location = new System.Drawing.Point(11, 306);
+            this.tb_searchInput.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tb_searchInput.Name = "tb_searchInput";
-            this.tb_searchInput.Size = new System.Drawing.Size(178, 22);
+            this.tb_searchInput.Size = new System.Drawing.Size(134, 20);
             this.tb_searchInput.TabIndex = 11;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(12, 349);
+            this.label1.Location = new System.Drawing.Point(9, 284);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(128, 17);
+            this.label1.Size = new System.Drawing.Size(97, 13);
             this.label1.TabIndex = 12;
             this.label1.Text = "Search for channel";
             // 
             // btn_search
             // 
-            this.btn_search.Location = new System.Drawing.Point(15, 406);
+            this.btn_search.Location = new System.Drawing.Point(11, 330);
+            this.btn_search.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btn_search.Name = "btn_search";
-            this.btn_search.Size = new System.Drawing.Size(178, 30);
+            this.btn_search.Size = new System.Drawing.Size(134, 24);
             this.btn_search.TabIndex = 13;
             this.btn_search.Text = "Search";
             this.btn_search.UseVisualStyleBackColor = true;
@@ -174,9 +185,9 @@
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1220, 535);
+            this.ClientSize = new System.Drawing.Size(915, 435);
             this.Controls.Add(this.btn_search);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.tb_searchInput);
@@ -185,6 +196,7 @@
             this.Controls.Add(this.label_info);
             this.Controls.Add(this.lb_channelList);
             this.Controls.Add(this.lb_gameList);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "Form1";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);

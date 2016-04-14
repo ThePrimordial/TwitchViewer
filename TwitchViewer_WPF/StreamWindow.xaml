@@ -1,0 +1,51 @@
+﻿<Window x:Class="TwitchViewer_WPF.StreamWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TwitchViewer_WPF"
+        xmlns:convert="clr-namespace:TwitchViewer_WPF.Converter"
+        mc:Ignorable="d" Height="300" Width="530" ResizeMode="CanMinimize" Icon="Assets/twitch_logo.png" WindowStartupLocation="CenterScreen">
+    <Window.Resources>
+        <convert:RadioButtonCheckedToStringConverter x:Key="CheckedConverter"></convert:RadioButtonCheckedToStringConverter>
+    </Window.Resources>
+    <Grid Background="#6441A5">
+        <Grid.RowDefinitions>
+            <RowDefinition Height=".2*"></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+
+        <Grid x:Name="Header" Grid.Row="0" Background="#977BC8">
+            <TextBlock Foreground="White" FontSize="24" HorizontalAlignment="Center" VerticalAlignment="Center" Text="{Binding HeaderText, Mode=OneWay}"></TextBlock>
+        </Grid>
+        <Grid x:Name="Content" Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width=".65*"></ColumnDefinition>
+                <ColumnDefinition Width=".35*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+
+            <Grid Grid.Column="0">
+                <StackPanel Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Center">
+                    <Image  Width="250" Height="175" Source="{Binding ImgSource, Mode=OneWay}"></Image>
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                        <TextBlock Foreground="White" FontSize="20" Text="{Binding ViewersNumber, Mode=OneWay}"></TextBlock>
+                        <TextBlock Foreground="White" FontSize="20" Margin="5,0,0,0">viewers</TextBlock>
+                    </StackPanel>
+                </StackPanel>
+            </Grid>
+            <Grid Grid.Column="1">
+                <StackPanel Orientation="Vertical" VerticalAlignment="Center">
+                    <RadioButton Content="Low" Foreground="White" FontSize="24" VerticalContentAlignment="Center" IsChecked="{Binding Quality, Mode=TwoWay, Converter={StaticResource CheckedConverter}, ConverterParameter=Low}"></RadioButton>
+                    <RadioButton Content="Medium" Foreground="White" FontSize="24" VerticalContentAlignment="Center" IsChecked="{Binding Quality, Mode=TwoWay, Converter={StaticResource CheckedConverter}, ConverterParameter=Medium}"></RadioButton>
+                    <RadioButton Content="High" Foreground="White" FontSize="24" VerticalContentAlignment="Center" IsChecked="{Binding Quality, Mode=TwoWay, Converter={StaticResource CheckedConverter}, ConverterParameter=High}"></RadioButton>
+                    <RadioButton Content="Source" Foreground="White" FontSize="24" VerticalContentAlignment="Center" IsChecked="{Binding Quality, Mode=TwoWay, Converter={StaticResource CheckedConverter}, ConverterParameter=Source}"></RadioButton>
+
+                    <Button Background="#6441A5" Foreground="White" FontSize="24" Margin="0,10,0,0" BorderBrush="White"
+                            Click="Button_Click">
+                        Stream!
+                    </Button>
+                </StackPanel>
+            </Grid>
+        </Grid>
+    </Grid>
+</Window>

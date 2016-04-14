@@ -1,9 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2013
-VisualStudioVersion = 12.0.21005.1
+# Visual Studio 14
+VisualStudioVersion = 14.0.24720.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TwitchViewer", "TwitchViewer\TwitchViewer.csproj", "{2B2929E1-3A57-496A-997D-F3D18B0E24AD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TwitchViewer_WPF", "TwitchViewer_WPF\TwitchViewer_WPF.csproj", "{9A248B82-64DB-48F8-93BF-08BC0C040127}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TwitchViewerLib", "TwitchViewerLib\TwitchViewerLib.csproj", "{EF80C3D9-F117-49DF-B6A8-F16C1870B98D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +19,14 @@ Global
 		{2B2929E1-3A57-496A-997D-F3D18B0E24AD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2B2929E1-3A57-496A-997D-F3D18B0E24AD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2B2929E1-3A57-496A-997D-F3D18B0E24AD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9A248B82-64DB-48F8-93BF-08BC0C040127}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9A248B82-64DB-48F8-93BF-08BC0C040127}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9A248B82-64DB-48F8-93BF-08BC0C040127}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9A248B82-64DB-48F8-93BF-08BC0C040127}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EF80C3D9-F117-49DF-B6A8-F16C1870B98D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EF80C3D9-F117-49DF-B6A8-F16C1870B98D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EF80C3D9-F117-49DF-B6A8-F16C1870B98D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EF80C3D9-F117-49DF-B6A8-F16C1870B98D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
